@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="Hexenkessel.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <link rel="stylesheet" href="Hexenkessel.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <title>L03 Hexenkessel Formular</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Online-Zaubertrank-Editor</h1>
+      <p>
+        "Ah, yes, Harry Potter. Our new celebrity." Stellen Sie Schritt für
+        Schritt dein Zaubertrankrezept zusammen.
+      </p>
+    </header>
+    <div id="container">
+      <form>
+        <div id="form">
+          <fieldset>
+            <legend>Name des Tranks</legend>
+            <input type="text" name="Trankname" id="potionName" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Beschreibung, Risiken und Nebenwirkungen</legend>
+            <textarea
+              name="Beschreibung"
+              id="description"
+              cols="45"
+              rows="2"
+            ></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Wirkung</legend>
+            <select name="Trankwirkung" id="effect">
+              <option value="Unbekannt">Unbekannt</option>
+              <option value="Stärkungstrank">Stärkungstrank</option>
+              <option value="Beruhigungstrank">Beruhigungstrank</option>
+              <option value="Schlaftrank">Schlaftrank</option>
+              <option value="Heiltrank">Heiltrank</option>
+              <option value="Glückstrank">Glückstrank</option>
+              <option value="Heilung von Furunkeln">
+                Heilung von Furunkeln
+              </option>
+              <option value="Liebestrank">Liebestrank</option>
+              <option value="Vergesslichkeitstrank">
+                Vergesslichkeitstrank
+              </option>
+              <option value="Wahrheitstrank">Wahrheitstrank</option>
+              <option value=" Todeselixier">Todeselixier</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
+            Dauer der Wirkung:
+
+            <input
+              type="number"
+              name="Dauer der Wirkung"
+              min="1"
+              max="5000"
+              step="1"
+              id="minuten"
+              value="0"
+            />
+            Minuten
+          </fieldset>
+          <fieldset>
+            <legend>Zutaten</legend>
+            <ul>
+              <li>
+                <label for="krötenaugen">
+                  <input
+                    type="checkbox"
+                    name="Zutat"
+                    value="Krötenaugen"
+                    id="krötenaugen"
+                  />
+                  Krötenaugen
+                </label>
+                <input
+                  type="number"
+                  name="Kröten Menge"
+                  min="1"
+                  max="100"
+                  step="1"
+                  id="mengeKröten"
+                  value="0"
+                />
+                Stück
+              </li>
+
+              <li>
+                <label for="spinnenbeine">
+                  <input
+                    type="checkbox"
+                    name="Zutat"
+                    value="Spinnenbeine"
+                    id="spinnenbeine"
+                  />
+                  Spinnenbeine
+                </label>
+                <input
+                  type="number"
+                  name="Spinnen Menge"
+                  min="1"
+                  max="100"
+                  step="1"
+                  id="mengeSpinnen"
+                  value="0"
+                />
+                Stück
+              </li>
+
+              <li>
+                <label for="glibberwürmer">
+                  <input
+                    type="checkbox"
+                    name="Zutat"
+                    value="Glibberwürmer"
+                    id="glibberwürmer"
+                  />
+                  Glibberwürmer
+                </label>
+                <input
+                  type="number"
+                  name="Würmer Menge"
+                  min="1"
+                  max="100"
+                  step="1"
+                  id="mengeWürmer"
+                  value="0"
+                />
+                Stück
+              </li>
+
+              <li>
+                <label for="flussgras">
+                  <input
+                    type="checkbox"
+                    name="Zutat"
+                    value="Flussgras"
+                    id="flussgras"
+                  />
+                  Flussgras
+                </label>
+                <input
+                  type="number"
+                  name="Gras Menge"
+                  min="1"
+                  max="100"
+                  step="1"
+                  id="mengeGras"
+                  value="0"
+                />
+                Stück
+              </li>
+
+              <li>
+                <label for="schlangenschuppen">
+                  <input
+                    type="checkbox"
+                    name="Zutat"
+                    value="Schlangenschuppen"
+                    id="schlangenschuppen"
+                  />
+                  Schlangenschuppen
+                </label>
+                <input
+                  type="number"
+                  name="Schlangen Menge"
+                  min="1"
+                  max="100"
+                  step="1"
+                  id="mengeSchuppen"
+                  value="0"
+                />
+                Stück
+              </li>
+
+              <li>
+                <label for="einhornblut">
+                  <input
+                    type="checkbox"
+                    name="Zutat"
+                    value="Einhornblut"
+                    id="einhornblut"
+                  />
+                  Einhornblut
+                </label>
+                <input
+                  type="number"
+                  name="Blut Menge"
+                  min="1"
+                  max="100"
+                  step="1"
+                  id="mengeBlut"
+                  value="0"
+                />
+                Stück
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Zubereitung</legend>
+            <label for="heat">
+              <input
+                type="radio"
+                name="Temperaturanweisung"
+                id="heat"
+                value="Trank erhitzen"
+              />erhitzen
+              <br />
+            </label>
+            <label for="cool">
+              <input
+                type="radio"
+                name="Temperaturanweisung"
+                id="cool"
+                value="Trank abkühlen"
+              />abkühlen
+            </label>
+            <label for="temperatur"
+              >auf:
+              <input
+                type="number"
+                name="Grad"
+                min="-20"
+                max="100"
+                step="0.1"
+                id="temperatur"
+              />Grad
+            </label>
+            <p class="hint">Dauer:</p>
+            Für:
+            <input
+              type="number"
+              name="Dauer"
+              min="0"
+              max="60"
+              step="0.5"
+              id="dauer1"
+            />
+            Minuten, bis Konsistenz:
+            <select name="TemperaturKonsistenz" id="konsistenz1">
+              <option value="zähflüssig">zähflüssig</option>
+              <option value="dickflüssig">dickflüssig</option>
+              <option value="schleimig">schleimig</option>
+            </select>
+            und Farbe: <input type="color" name="TemperaturFarbe" id="color1" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Rührintensität</legend>
+            0<input
+              type="range"
+              name="Rührintensität"
+              id="rühren"
+              min="0"
+              max="5"
+              step="1"
+              value="0"
+            />5
+            <p class="hint">Dauer:</p>
+            Für:
+            <input
+              type="number"
+              name="Rührdauer"
+              min="0"
+              max="60"
+              step="0.5"
+              id="dauer2"
+            />
+            Minuten, bis Konsistenz:
+            <select name="RührenKonsistenz" id="konsistenz2">
+              <option value="zähflüssig">zähflüssig</option>
+              <option value="dickflüssig">dickflüssig</option>
+              <option value="schleimig">schleimig</option>
+            </select>
+            und Farbe: <input type="color" name="RührenFarbe" id="color2" />
+          </fieldset>
+        </div>
+      </form>
+
+      <div id="rezept">
+        <h2>Rezept</h2>
+        <div id="result"></div>
+      </div>
+    </div>
+  </body>
+</html>
