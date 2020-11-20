@@ -25,7 +25,7 @@ var L05_Hexenkessel_Client;
         btnIngredients.addEventListener("click", displayIngredients);
         btnTemperature.addEventListener("click", displayTemperature);
         btnStir.addEventListener("click", displayStir);
-        btnDelete.addEventListener("click", askBeforeDelete);
+        btnDelete.addEventListener("click", reallyDelete);
     }
     function displayDuration(_event) {
         console.log("hallo");
@@ -42,25 +42,24 @@ var L05_Hexenkessel_Client;
         let outputGeneral = (document.querySelector("div#outputGeneral"));
         let outputInstructions = (document.querySelector("div#outputInstructions"));
         if (outputGeneral.innerHTML && outputInstructions.innerHTML == "") {
-            alert("Professor Snape wird sich nicht freuen, wenn du eine leere Seite abgibst...");
+            alert("Tut, tut — fame clearly isn't everything. ...");
         }
         else {
             console.log("Send Recipe");
             let querySendGeneral = new URLSearchParams(formDataSendGeneral);
             let querySendInstructions = new URLSearchParams(formDataSendInstructions);
-            await fetch("index.html?" + querySendGeneral.toString());
-            await fetch("index.html?" + querySendInstructions.toString());
-            //When recipe has been sent by user, delete all contents of output and all keys, values of formDataSends
+            await fetch("Hexenkessel.html?" + querySendGeneral.toString());
+            await fetch("Hexenkessel.html?" + querySendInstructions.toString());
             deleteAll();
-            alert("Rezept gesendet!");
+            alert("Rezept erfolgreich gesendet!");
         }
     }
-    function askBeforeDelete() {
+    function reallyDelete() {
         let outputGeneral = (document.querySelector("div#outputGeneral"));
         let outputInstructions = (document.querySelector("div#outputInstructions"));
         if (outputGeneral.innerHTML &&
             outputInstructions.innerHTML != "" &&
-            confirm("Bist du sicher, dass du alles löschen möchtest?")) {
+            confirm("Die Hoffnung aufgegeben, Potter?")) {
             deleteAll();
         }
     }
@@ -150,24 +149,21 @@ var L05_Hexenkessel_Client;
                 case "RührenDauer":
                     if (entry[1] != "0" && intensity) {
                         outputInstructions.innerHTML +=
-                            "➔ Rühren bis " +
-                                entry[1] +
-                                " Minute(n) vergangen sind." +
-                                "<br>";
+                            "Rühren bis " + entry[1] + " Minute(n) vergangen sind." + "<br>";
                         formDataSendInstructions.append(entry[0], entry[1]);
                     }
                     break;
                 case "RührenFarbe":
                     if (entry[1] != "keine Angabe" && intensity) {
                         outputInstructions.innerHTML +=
-                            "➔ Rühren bis die Trankfarbe " + entry[1] + " ist." + "<br>";
+                            "Rühren bis die Trankfarbe " + entry[1] + " ist." + "<br>";
                         formDataSendInstructions.append(entry[0], entry[1]);
                     }
                     break;
                 case "RührenKonsistenz":
                     if (entry[1] != "keine Angabe" && intensity) {
                         outputInstructions.innerHTML +=
-                            "➔ Rühren bis die Konsistenz " + entry[1] + " ist." + "<br>";
+                            "Rühren bis die Konsistenz " + entry[1] + " ist." + "<br>";
                         formDataSendInstructions.append(entry[0], entry[1]);
                     }
                     break;
@@ -193,14 +189,14 @@ var L05_Hexenkessel_Client;
                 case "TemperaturGrad":
                     if (entry[1] != "" && temperature) {
                         outputInstructions.innerHTML +=
-                            "➔ Befolgen bis " + entry[1] + " °C erreicht sind." + "<br>";
+                            "Befolgen bis " + entry[1] + " °C erreicht sind." + "<br>";
                         formDataSendInstructions.append(entry[0], entry[1]);
                     }
                     break;
                 case "TemperaturDauer":
                     if (entry[1] != "0" && temperature) {
                         outputInstructions.innerHTML +=
-                            "➔ Befolgen bis " +
+                            "Befolgen bis " +
                                 entry[1] +
                                 " Minute(n) vergangen sind." +
                                 "<br>";
@@ -210,14 +206,14 @@ var L05_Hexenkessel_Client;
                 case "TemperaturFarbe":
                     if (entry[1] != "keine Angabe" && temperature) {
                         outputInstructions.innerHTML +=
-                            "➔ Befolgen bis die Trankfarbe " + entry[1] + " ist." + "<br>";
+                            "Befolgen bis die Trankfarbe " + entry[1] + " ist." + "<br>";
                         formDataSendInstructions.append(entry[0], entry[1]);
                     }
                     break;
                 case "TemperaturKonsistenz":
                     if (entry[1] != "keine Angabe" && temperature) {
                         outputInstructions.innerHTML +=
-                            "➔ Befolgen bis die Konsistenz " + entry[1] + " ist." + "<br>";
+                            "Befolgen bis die Konsistenz " + entry[1] + " ist." + "<br>";
                         formDataSendInstructions.append(entry[0], entry[1]);
                     }
                     break;
