@@ -84,8 +84,8 @@ namespace L05_Hexenkessel_Client {
       let querySendInstructions: URLSearchParams = new URLSearchParams(
         <any>formDataSendInstructions
       );
-      await fetch("index.html?" + querySendGeneral.toString());
-      await fetch("index.html?" + querySendInstructions.toString());
+      await fetch("Hexenkessel.html?" + querySendGeneral.toString());
+      await fetch("Hexenkessel.html?" + querySendInstructions.toString());
 
       deleteAll();
       alert("Rezept erfolgreich gesendet!");
