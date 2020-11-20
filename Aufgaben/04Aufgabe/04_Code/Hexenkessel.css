@@ -15,7 +15,6 @@ body {
 header {
   grid-column: span 3;
   text-align: center;
-  margin-top: 15px;
   margin-bottom: 10px;
   color: whitesmoke;
   font-family: "Parisienne", cursive;
