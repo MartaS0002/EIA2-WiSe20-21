@@ -2,19 +2,27 @@
     "Zutaten": [
         {
             "name": "Spinnenbeine",
-            "price": 50
+            "price": 35
+        },
+        {
+            "name": "Flussgras",
+            "price": 5
+        },
+        {
+            "name": " Einhornblut",
+            "price": 70
         },
         {
             "name": "Krötenaugen",
-            "price": 40
-        },
-        {
-            "name": "Glibberwürmer",
             "price": 20
         },
         {
+            "name": "Glibberwürmer",
+            "price": 15
+        },
+        {
             "name": "Schlangenschuppen",
-            "price": 75
+            "price": 55
         }
     ]
 }
