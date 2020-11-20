@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hexenkessel</title>
+    <link
+      rel="stylesheet"
+      href="Hexenkessel.css"
+      type="text/css"
+      media="screen"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="GenerateContent.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script
+      src="Hexenkessel.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Online-Zaubertrank-Editor</h1>
+      <p>
+        "Ah, yes, Harry Potter. Our new celebrity." Stellen Sie Schritt für
+        Schritt das Zaubertrankrezept zusammen.
+      </p>
+    </header>
+
+    <form id="formGeneral" method="GET">
+      <div id="form1">
+        <h2>Allgemein</h2>
+        <fieldset id="Name">
+          <legend>Name</legend>
+          <input type="text" name="Name" id="name" value="" />
+        </fieldset>
+
+        <fieldset id="Beschreibung">
+          <legend>Beschreibung</legend>
+          <textarea
+            name="Beschreibung"
+            id="beschreibung"
+            cols="45"
+            rows="4"
+            value=""
+          ></textarea>
+        </fieldset>
+
+        <fieldset id="Wirkung">
+          <legend>Wirkung</legend>
+          <select name="Trankwirkung" id="effect">
+            <option value="Unbekannt">Unbekannt</option>
+            <option value="Glückstrank">Glückstrank</option>
+            <option value="Wahrheitstrank">Wahrheitstrank</option>
+            <option value="Verwandlungstrank">Verwandlungstrank</option>
+            <option value="Beruhigungstrank">Beruhigungstrank</option>
+            <option value="Schlaftrank">Schlaftrank</option>
+            <option value="Liebestrank">Liebestrank</option>
+            <option value="Heiltrank">Heiltrank</option>
+            <option value="Stärkungstrank">Stärkungstrank</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Wirkungsdauer</legend>
+          <span class="slider">
+            <span>
+              1 Min
+              <input
+                type="range"
+                name="Duration"
+                id="duration"
+                min="1"
+                max="60"
+                step="1"
+                value="1"
+              />
+              60 Min
+            </span>
+          </span>
+        </fieldset>
+        <button class="allBtns" id="btnGeneral" type="button">
+          Hinzufügen
+        </button>
+        <button class="allBtns" id="reset" type="reset">
+          Allgemein Löschen
+        </button>
+      </div>
+    </form>
+
+    <form id="formInstructions" method="GET">
+      <div id="form2">
+        <h2>Anweisungen</h2>
+        <fieldset id="Zutaten">
+          <legend>Zutaten</legend>
+        </fieldset>
+        <button class="allBtns" id="btnIngredients" type="button">
+          Hinzufügen
+        </button>
+
+        <fieldset id="Temperatur">
+          <legend></legend>
+          <label for="erhitzen">
+            <input
+              type="radio"
+              name="Temperatur"
+              id="erhitzen"
+              value="erhitzen"
+            />erhitzen
+          </label>
+          <label for="abkühlen">
+            <input
+              type="radio"
+              name="Temperatur"
+              id="abkühlen"
+              value="abkühlen"
+            />abkühlen
+          </label>
+          <label for="temperatur"
+            >bis
+            <input
+              type="number"
+              name="TemperaturGrad"
+              min="-20"
+              max="100"
+              step="0.1"
+              id="temperatur"
+            />
+            °C erreicht sind.
+          </label>
+
+          <p>Dauer:</p>
+          <fieldset class="inside">
+            Für
+            <input
+              type="number"
+              name="TemperaturDauer"
+              min="0"
+              max="60"
+              step="0.5"
+              value="0"
+              id="dauer1"
+            />
+            Minuten,
+          </fieldset>
+          <fieldset class="inside">
+            bis Farbe:
+            <select name="TemperaturFarbe" id="temperaturFarbe">
+              <option value="keine Angabe">keine Angabe</option>
+              <option value="schwarz">schwarz</option>
+              <option value="weiß">weiß</option>
+              <option value="blau">blau</option>
+              <option value="rosa">rosa</option>
+              <option value="rot">rot</option>
+              <option value="grün">grün</option>
+              <option value="lila">lila</option>
+              <option value="orange">orange</option>
+              <option value="gelb">gelb</option>
+              <option value="violett">violett</option>
+              <option value="türkis">türkis</option>
+              <option value="braun">braun</option>
+              <option value="grau">grau</option>
+            </select>
+          </fieldset>
+          <fieldset class="inside">
+            und Konsistenz:
+            <select name="TemperaturKonsistenz" id="temperaturKonsistenz">
+              <option value="keine Angabe">keine Angabe</option>
+              <option value="dickflüssig">dickflüssig</option>
+              <option value="dünnflüssig">dünnflüssig</option>
+              <option value="schleimig">schleimig</option>
+            </select>
+          </fieldset>
+        </fieldset>
+
+        <button class="allBtns" id="btnTemperature" type="button">
+          Hinzufügen
+        </button>
+
+        <fieldset id="Rührintensität">
+          <legend>Rührintensität</legend>
+          <div class="slider">
+            <span>
+              (langsam) 0
+              <input
+                type="range"
+                name="Intensity"
+                id="intensity"
+                min="0"
+                max="10"
+                step="1"
+                value="0"
+              />
+              10 (sehr intensiv)
+            </span>
+          </div>
+
+          <p>Dauer:</p>
+          <fieldset class="inside">
+            Für
+            <input
+              type="number"
+              name="RührenDauer"
+              min="0"
+              max="60"
+              step="0.5"
+              value="0"
+              id="dauer2"
+            />
+            Minuten,
+          </fieldset>
+          <fieldset class="inside">
+            bis Farbe:
+            <select name="RührenFarbe" id="rührenFarbe">
+              <option value="keine Angabe">keine Angabe</option>
+              <option value="schwarz">schwarz</option>
+              <option value="weiß">weiß</option>
+              <option value="blau">blau</option>
+              <option value="rosa">rosa</option>
+              <option value="rot">rot</option>
+              <option value="grün">grün</option>
+              <option value="lila">lila</option>
+              <option value="orange">orange</option>
+              <option value="gelb">gelb</option>
+              <option value="violett">violett</option>
+              <option value="türkis">türkis</option>
+              <option value="braun">braun</option>
+              <option value="grau">grau</option>
+            </select>
+          </fieldset>
+          <fieldset class="inside">
+            und Konsistenz:
+            <select name="RührenKonsistenz" id="rührenKonsistenz">
+              <option value="keine Angabe">keine Angabe</option>
+              <option value="dickflüssig">dickflüssig</option>
+              <option value="dünnflüssig">dünnflüssig</option>
+              <option value="schleimig">schleimig</option>
+            </select>
+          </fieldset>
+        </fieldset>
+        <button class="allBtns" id="btnStir" type="button">Hinzufügen</button>
+        <button class="allBtns" id="reset" form="formInstructions" type="reset">
+          Anweisungen Löschen
+        </button>
+      </div>
+    </form>
+
+    <div id="output">
+      <h2>
+        Dein Rezept <br /><br />
+        Allgemein:
+      </h2>
+      <div id="outputGeneral"></div>
+      <h2>Anweisungen:</h2>
+      <div id="outputInstructions"></div>
+      <span id="totalSpan"></span>
+      <button
+        class="allBtns"
+        type="button"
+        id="btnSend"
+        form="formInstructions"
+        form="formGeneral"
+      >
+        Senden
+      </button>
+      <button class="allBtns" id="delete" type="button">Rezept Löschen</button>
+    </div>
+  </body>
+</html>
