@@ -1,0 +1,141 @@
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 10pt;
+  display: grid;
+  grid-template-columns: 28% auto;
+  background-image: url("hp.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(241, 241, 241);
+}
+
+header {
+  grid-column: span 3;
+  text-align: center;
+  font-size: 20px;
+}
+
+h1 {
+  margin-bottom: -10px;
+  font-family: "Henny Penny", cursive;
+}
+
+h2 {
+  margin-left: 1em;
+  font-size: 25px;
+  font-family: "Henny Penny", cursive;
+}
+
+p:not(header) {
+  font-family: "Henny Penny", cursive;
+  font-size: 20px;
+}
+
+#form1 > fieldset {
+  margin-bottom: 10px;
+  border: none;
+}
+
+#form2 > fieldset {
+  border: none;
+}
+
+button {
+  background-color: rgba(136, 162, 218, 0);
+  color: white;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: cursive;
+  font-size: 13px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(136, 162, 218);
+}
+
+div {
+  border: thin solid black;
+  margin: 1em;
+  background-color: rgba(17, 18, 75, 0.253);
+  border-radius: 10px;
+  border-color: whitesmoke;
+}
+
+#output {
+  width: 25em;
+}
+
+progress {
+  margin-left: 10px;
+  text-align: right;
+  height: 3em;
+  width: 3em;
+}
+
+.slider {
+  width: fit-content;
+  border: hidden;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+input[type="number"] {
+  height: 12.8px;
+  width: 40px;
+}
+
+input[type="radio"] {
+  margin-top: 10px;
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
+}
+
+textarea {
+  width: 70%;
+}
+
+#groupStyle {
+  border: hidden;
+  margin: 0;
+}
+
+input[type="color"] {
+  height: 17px;
+}
+
+input[type="range"] {
+  margin-top: 10px;
+}
+
+input[type="range"]:hover {
+  cursor: pointer;
+}
+
+.inside {
+  border: hidden;
+  display: inline;
+}
+
+#outputInstructions {
+  border: hidden;
+  font-family: cursive;
+}
+
+#outputGeneral {
+  border: hidden;
+  margin-left: 1.5em;
+  font-family: cursive;
+}
