@@ -5,7 +5,7 @@ namespace L06_Hexenkessel_Server {
   let formDataSendGeneral: FormData = new FormData();
   let x: number = 1;
 
-  let url: string = " https://git.heroku.com/help1me2plz3.git";
+  let url: string = " https://help1me2plz3.herokuapp.com/";
 
   async function handleLoad(_event: Event): Promise<void> {
     let response: Response = await fetch("Data.json");
