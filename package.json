@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@types/node": "^14.14.9"
+  },
+  "name": "ich1weiss2nicht3was4ich5tue6",
+  "version": "1.0.0",
+  "description": "beschreibung",
+  "main": "GenerateContent.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node GenerateContent.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "C:\\Users\\WOMBATTI\\Desktop\\06_Code\\Client\\Data.json"
+  },
+  "keywords": [
+    "name"
+  ],
+  "author": "marta",
+  "license": "ISC"
+}
