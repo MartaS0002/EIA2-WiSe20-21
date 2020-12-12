@@ -59,8 +59,10 @@ var L08_Skipiste;
         crc2.restore();
     }
     // WOLKE
+ 
     function drawCloud(_position, _size) {
-        console.log("Cloud", _position, _size);
+           console.log("Wolken", _position, _size);
+     
         let nParticles = 50;
         let radiusParticle = 40;
         let particle = new Path2D();
@@ -82,7 +84,9 @@ var L08_Skipiste;
         crc2.restore();
     }
     // BERGE
+ 
     function drawBerg() {
+           console.log("Berg");
         crc2.beginPath();
         crc2.lineTo(400, 105);
         crc2.lineTo(490, 30);
@@ -119,7 +123,9 @@ var L08_Skipiste;
         crc2.fill();
     }
     // PISTE
+  
     function drawPiste() {
+          console.log("Skipiste");
         crc2.beginPath();
         crc2.moveTo(0, 250);
         crc2.lineTo(700, 0);
@@ -131,7 +137,9 @@ var L08_Skipiste;
         crc2.fill();
     }
     //KURVE (inspiriert von Oliver)
+  
     function drawKurve() {
+          console.log("Kurve - Wahoo");
         crc2.beginPath();
         crc2.bezierCurveTo(600, 220, 0, 310, 500, 400);
         crc2.bezierCurveTo(500, 400, 800, 450, 200, 700);
@@ -139,6 +147,7 @@ var L08_Skipiste;
     }
     // TREES
     function drawTrees() {
+        
         console.log("Grün, grün, grün sind alle meine Kleider");
         crc2.fillStyle = "darkgreen";
         crc2.strokeStyle = "black";
@@ -313,6 +322,7 @@ var L08_Skipiste;
     }
     //LIFT
     function drawLift() {
+         console.log("Lift(ed)");
         crc2.beginPath();
         crc2.moveTo(0, 300);
         crc2.lineTo(720, 0);
@@ -353,8 +363,9 @@ var L08_Skipiste;
         crc2.lineTo(550, 80);
         crc2.stroke();
     }
-
+ // HOUSE
     function drawHouse() {
+               console.log("Home");
         crc2.fillStyle = "#8A4B08";
         crc2.beginPath();
         crc2.moveTo(150, 725);
@@ -375,6 +386,7 @@ var L08_Skipiste;
     }
     // MENSCHEN
     function drawSkier() {
+         console.log("We are the people");
         let skiCount = 7;
         crc2.save();
         for (let i = 0; i < skiCount; i++) {
@@ -454,6 +466,7 @@ var L08_Skipiste;
     }
     // SCHNEE
     function drawSnowflakes() {
+           console.log("Let it snow");
         for (let i = 0; i < 1000; i++) {
             let x = Math.random() * window.innerWidth;
             let y = Math.random() * window.innerHeight;
